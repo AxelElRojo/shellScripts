@@ -1,0 +1,3 @@
+#!/bin/sh
+$dirObjetivo="/home/axel/.local/bin/SCRIPTS/"
+$dirFuente="/home/axel/PERSONAL/PROGRAMAS/SHELL/shellScripts/"

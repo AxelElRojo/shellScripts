@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR=$(pwd)
+rDIR=""
+while [ "$rDIR" != '.' ]; do
+	rDIR=$(ls $DIR -al | grep ^d | awk '{print $9}' | dmenu)
+	DIR=$DIR'/'$rDIR
+done
+thunar $DIR

@@ -1,0 +1,3 @@
+#!/bin/bash
+OPC=$(echo -e "Sí\nNo" | dmenu -p "¿Deseas apagar el equipo?")
+[ "$OPC" = "Sí" ] && shutdown -h now
