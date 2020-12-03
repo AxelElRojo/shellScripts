@@ -1,3 +1,22 @@
 #!/bin/sh
-$dirObjetivo="/home/axel/.local/bin/SCRIPTS/"
-$dirFuente="/home/axel/PERSONAL/PROGRAMAS/SHELL/shellScripts/"
+dirObjetivo="/home/axel/.local/bin/SCRIPTS/"
+dirFuente="/home/axel/PERSONAL/PROGRAMAS/SHELL/shellScripts/"
+case $1 in
+	"-a")
+		for archivo in $dirFuente"*"; do
+			cp $archivo $dirObjetivo
+		done
+	;;
+	"-r")
+		for archivo in $dirObjetivo"*"; do
+			cp $archivo $dirFuente
+		done
+	;;
+	"-h")
+		echo "-a : Actualiza los scripts del repo al directorio donde se utilizan"
+		echo "-r : Respalda los cambios que se han hecho a los archivos"
+	;;
+	*)
+		echo "Ingrese un flag apropiado"
+	;;
+esac
