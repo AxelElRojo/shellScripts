@@ -1,7 +1,7 @@
 # shellScripts
 
 No hay mucho que decir acerca de esto, es una colección de script simples que pretendo utilizar en mi computadora, algunos no están terminados.
----
+
 * abrirDirectorio
 Muestra los directorios en dmenu, empezando desde $HOME, la idea es navegar la estructura de directorios a través de dmenu, para terminar, se selecciona el directorio
 actual (./).
