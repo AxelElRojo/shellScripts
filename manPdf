@@ -1,2 +1,2 @@
 #!/bin/sh
-man $(apropos . | awk '{print $1}' | dmenu) | zathura
+man $(apropos . | awk '{print $1}' | dmenu) -Tpdf | xargs -r zathura

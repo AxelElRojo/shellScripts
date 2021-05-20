@@ -1,3 +1,11 @@
 #!/bin/bash
-OPC=$(echo -e "Sí\nNo" | dmenu -p "¿Deseas apagar el equipo?")
-[ "$OPC" = "Sí" ] && shutdown -h now
+OPC=$(echo -e "Sí\nNo\nReiniciar" | dmenu -p "¿Deseas apagar el equipo?")
+case $OPC in
+	"Sí")
+	alacritty	
+	shutdown -h now
+	;;
+	"Reiniciar")
+	shutdown -hr now
+	;;
+esac
